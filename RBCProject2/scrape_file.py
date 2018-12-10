@@ -14,12 +14,13 @@ def scrape_one():
     browser.visit(url)
     html = browser.html
     soup = BeautifulSoup(html, 'html.parser')
+    #bloomingdales jacket site
+    jacket_image = soup.find('li', class_='main-image')
 
-    mainjacket = soup.find('li', class_='main-image')
+    link = jacket_image.find('img', class_='main-image-img first-image')
+    url = link['src']
+    title = link['title']
 
-    jacket_title = mainjacket('img')
-    img_title = jacket_title['title']
-
-    jackets = {"title": img_title, "img": jacket_title}
+    jackets = {"title": title, "img": url}
 
     return jackets

@@ -22,10 +22,10 @@ def scrape():
     shoppingdict = {
 
         "Jacket_Title": jackets["title"],
-        "Jacket_Image": jackets["img"]
+        "Jacket_Image": jackets["url"]
     }
 
-    jackets.update({}, shoppingdict, upsert=True)
+    shopping.update({}, shoppingdict, upsert=True)
 
     return redirect("/", code = 302)
 
