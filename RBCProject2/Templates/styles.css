@@ -1,0 +1,37 @@
+#h2 {
+  color: black;
+  font-size: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  text-align: left;
+}
+
+#h4 {
+    color:black;
+    font-size: 26px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+#h3 {
+color: black;
+font-size: 18px;
+font-family: Georgia, 'TImes New Roman', Times, serif;
+font-weight: bold;
+}
+
+#p {
+    font-weight:bold;
+}
+
+
+#border {
+    border-width: 2px;
+    border-style: solid;
+    color: darkgray;
+    padding-left:10px;
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-right:10px;
+  }
