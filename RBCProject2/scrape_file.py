@@ -17,11 +17,11 @@ def scrape_one():
     #bloomingdales jacket site
     jacket_image = soup.find('li', class_='main-image')
 
-    link = jacket_image.find('img' class_='main-image-img first-image')
+    link = jacket_image.find('img', class_='main-image-img')
     url = link['src']
     title = link['title']
 
-    jackets = {"title": title, "image": url}
+    jackets = { "title": title, "image": url}
 
     return jackets
 
@@ -36,7 +36,7 @@ def scrape_two():
     #bloomingdales jeans
     jeans_image = soup.find("li", class_="main-image")
 
-    link = jeans_image.find('img', class_= "main-image-img first-img")
+    link = jeans_image.find('img', class_= "main-image-img")
     url = link["src"]
     title = link["title"]
 
@@ -55,7 +55,7 @@ def scrape_three():
     #bloomingdales shoes
     shoes_image = soup.find("li", class_="main-image")
 
-    link = shoes_image.find('img', class_= "main-image-img first-img")
+    link = shoes_image.find('img', class_= "main-image-img")
     url = link["src"]
     title = link["title"]
 

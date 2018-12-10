@@ -13,30 +13,31 @@
 <body>
     <div class = "container">
         <div class="jumbotron text-center">
-            <h1>Don't Know what to Wear?</h1>
-            <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">We got you!</a></p>
+            <h1>May We Suggest?</h1>
+            <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Brrr! Cold Forecast</a></p>
         </div>
         
         {% for shoppingdict in shopping%}
         <div class = "container-fluid">
             <div class = "row">
                 <div class="col-md-12">
+                    <div class="col-md-3">
                     <h2 id="h2">Jackets</h2>
-                        <h3 id="h3">{{ shoppingdict.Jacket_Title }}</h3>
-                        <img src = "{{ shoppingdict.Jacket_Image }}" alt = "Jacket Image"></p>
-                </div>
-                <div class = "row">
-                    <div class="col-md-12">
-                        <h2 id="h2">Jeans</h2>
-                            <h3 id="h3">{{ shoppingdict.Jean_Title }}</h3>
-                            <img src = "{{ shoppingdict.Jean_Image }}" alt = "Jean Image"></p>
+                        <h3 id="h3">{{ shoppingdict.Jacket_Title }} </h3>
+                        <a href = {{ shoppingdict.Jacket_Image }}> Click here!</a>
+                            <img src = "{{ shoppingdict.Jacket_Image }}" alt = "Jacket Image" width="100" height="100">
                     </div>
-                </div>
-                <div class = "row">
-                    <div class="col-md-12">
+                    <div class="col-md-3">
+                        <h2 id="h2">Jeans</h2>
+                            <h3 id="h3">{{ shoppingdict.Jean_Title }} </h3>
+                            <a href = {{ shoppingdict.Jean_Image }}> Click here!</a>
+                                <img src = "{{ shoppingdict.Jean_Image }}" alt = "Jean Image" width="100" height="100">
+                    </div>
+                    <div class="col-md-3">
                         <h2 id="h2">Shoes</h2>
-                            <h3 id="h3">{{ shoppingdict.Shoes_Title }}</h3>
-                            <img src = "{{ shoppingdict.Shoes_Image }}" alt = "Shoes Image"></p>
+                            <h3 id="h3">{{ shoppingdict.Shoes_Title }} </h3>
+                            <a href = {{ shoppingdict.Shoes_Image }}> Click here!</a>
+                                <img src = "{{ shoppingdict.Shoes_Image }}" alt = "Shoes Image" width="100" height="100">
                     </div>
                 </div>
             </div>

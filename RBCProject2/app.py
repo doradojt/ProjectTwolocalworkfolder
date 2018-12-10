@@ -24,11 +24,11 @@ def scrape():
     shoppingdict = {
 
         "Jacket_Title": jackets["title"],
-        "Jacket_Image": jackets["url"],
+        "Jacket_Image": jackets["image"],
         "Jean_Title": jeans["title"],
-        "Jean_Image": jeans["url"],
+        "Jean_Image": jeans["image"],
         "Shoes_Title": shoes["title"],
-        "Shoes_Image": shoes["url"]
+        "Shoes_Image": shoes["image"]
     }
 
     shopping.update({}, shoppingdict, upsert=True)
