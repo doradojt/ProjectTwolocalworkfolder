@@ -62,3 +62,117 @@ def scrape_three():
     shoes = {"title": title, "image": url}
 
     return shoes
+
+def scrape_four():
+    browser = init_browser()
+
+    url = "https://www.bloomingdales.com/shop/product/rag-bone-standard-issue-chino-shorts-in-stone?ID=2517525&CategoryID=11576#fn=ppp%3Dundefined%26sp%3DNULL%26rId%3DNULL%26spc%3D141%26spp%3D5%26pn%3D1%7C2%7C5%7C141%26rsid%3Dundefined%26smp%3DmatchNone/"
+
+    browser.visit(url)
+    html = browser.html
+    soup = BeautifulSoup(html, 'html.parser')
+    #bloomingdales shorts
+    shorts_image = soup.find("li", class_="main-image")
+
+    link = shorts_image.find('img', class_= "main-image-img")
+    url = link["src"]
+    title = link["title"]
+
+    shorts = {"title": title, "image": url}
+
+    return shorts
+
+def scrape_five():
+    browser = init_browser()
+
+    url = "https://www.bloomingdales.com/shop/product/lacoste-pique-polo-classic-fit?ID=3209107&CategoryID=1000663#fn=ppp%3Dundefined%26sp%3DNULL%26rId%3DNULL%26spc%3D262%26spp%3D1%26pn%3D1%7C3%7C1%7C262%26rsid%3Dundefined%26smp%3DmatchNone/"
+
+    browser.visit(url)
+    html = browser.html
+    soup = BeautifulSoup(html, 'html.parser')
+    #bloomingdales polo
+    polo_image = soup.find("li", class_="main-image")
+
+    link = polo_image.find('img', class_= "main-image-img")
+    url = link["src"]
+    title = link["title"]
+
+    polo = {"title": title, "image": url}
+
+    return polo
+
+def scrape_six():
+    browser = init_browser()
+
+    url = "https://www.bloomingdales.com/shop/product/adidas-mens-adilette-slide-sandals?ID=2844743&CategoryID=1000051#fn=ppp%3Dundefined%26sp%3DNULL%26rId%3DNULL%26spc%3D54%26spp%3D3%26pn%3D1%7C1%7C3%7C54%26rsid%3Dundefined%26smp%3DmatchNone/"
+
+    browser.visit(url)
+    html = browser.html
+    soup = BeautifulSoup(html, 'html.parser')
+    #bloomingdales sandals
+    sandals_image = soup.find("li", class_="main-image")
+
+    link = sandals_image.find('img', class_= "main-image-img")
+    url = link["src"]
+    title = link["title"]
+
+    sandals = {"title": title, "image": url}
+
+    return sandals
+
+def scrape_seven():
+    browser = init_browser()
+
+    url = "https://www.bloomingdales.com/shop/product/turnbull-asser-micro-check-classic-fit-dress-shirt?ID=1573627&CategoryID=17647#fn=ppp%3Dundefined%26sp%3DNULL%26rId%3DNULL%26spc%3D270%26spp%3D7%26rsid%3Dundefined%26smp%3DmatchNone/"
+
+    browser.visit(url)
+    html = browser.html
+    soup = BeautifulSoup(html, 'html.parser')
+    #bloomingdales dress shirt
+    dress_shirt_image = soup.find("li", class_="main-image")
+
+    link = dress_shirt_image.find('img', class_= "main-image-img")
+    url = link["src"]
+    title = link["title"]
+
+    dress_shirt = {"title": title, "image": url}
+
+    return dress_shirt
+
+def scrape_eight():
+    browser = init_browser()
+
+    url = "https://www.bloomingdales.com/shop/product/polo-ralph-lauren-stretch-classic-fit-chino-pants?ID=1635314&CategoryID=10189#fn=ppp%3Dundefined%26sp%3DNULL%26rId%3DNULL%26spc%3D567%26spp%3D2%26pn%3D1%7C6%7C2%7C567%26rsid%3Dundefined%26smp%3DmatchNone/"
+
+    browser.visit(url)
+    html = browser.html
+    soup = BeautifulSoup(html, 'html.parser')
+    #bloomingdales dress pant
+    dress_pant_image = soup.find("li", class_="main-image")
+
+    link = dress_pant_image.find('img', class_= "main-image-img")
+    url = link["src"]
+    title = link["title"]
+
+    dress_pant = {"title": title, "image": url}
+
+    return dress_pant
+
+def scrape_nine():
+    browser = init_browser()
+
+    url = "https://www.bloomingdales.com/shop/product/ted-baker-mens-jhorge-mixed-leather-plain-toe-oxfords?ID=3097963&CategoryID=1001183#fn=ppp%3Dundefined%26sp%3DNULL%26rId%3DNULL%26spc%3D217%26spp%3D1%26pn%3D1%7C3%7C1%7C217%26rsid%3Dundefined%26smp%3DmatchNone/"
+
+    browser.visit(url)
+    html = browser.html
+    soup = BeautifulSoup(html, 'html.parser')
+    #bloomingdales dress shoe
+    dress_shoe_image = soup.find("li", class_="main-image")
+
+    link = dress_shoe_image.find('img', class_= "main-image-img")
+    url = link["src"]
+    title = link["title"]
+
+    dress_shoe = {"title": title, "image": url}
+
+    return dress_shoe
