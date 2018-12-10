@@ -18,11 +18,17 @@ def scrape():
     shopping = mongo.db.shopping
 
     jackets = scrape_file.scrape_one()
+    jeans = scrape_file.scrape_two()
+    shoes = scrape_file.scrape_three()
 
     shoppingdict = {
 
         "Jacket_Title": jackets["title"],
-        "Jacket_Image": jackets["url"]
+        "Jacket_Image": jackets["url"],
+        "Jean_Title": jeans["title"],
+        "Jean_Image": jeans["url"],
+        "Shoes_Title": shoes["title"],
+        "Shoes_Image": shoes["url"]
     }
 
     shopping.update({}, shoppingdict, upsert=True)
