@@ -57,28 +57,29 @@ def forecastavg():
     return jsonify(all_avgs)
 
 
-###@app.route("/alldata")
-#def alldata():
-#attempt to return all data
+@app.route("/alldata")
+def alldata():
+#attempt to return all data, not currently working
 
- #   results = session.query(Data).all()
- #   data_dict = {}
+    results = session.query(Data).all()
+    data_dict = []
 
-  #  for data in results:
-  #       data_dict["state_id"] = data.state_id
-  #       data_dict["station_name"] = data.station_name
-  #       data_dict["state"] = data.state
-  #       data_dict["country"] = data.country
-  #       data_dict["production_date"] = data.production_date
-  #       data_dict["forecast_date"] = data.forecast_date
-  #       data_dict["lat"] = data.lat
-  #       data_dict["lon"] = data.lon
-  #       data_dict["fcst_avg"] = data.fcst_avg
-   #      data_dict["norm_mn"] = data.norm_mn
-   #      data_dict["norm_mx"] = data.norm_mx
-   #      data.append(data_dict)
+    for data in results:
+        data_dict = {
+            "state_id":data.state_id,
+            "station_name":data.station_name,
+            "state":data.state,
+            "country":data.country,
+            "production_date" :data.production_date,
+            "forecast_date" : data.forecast_date,
+            "lat" : data.lat,
+            "lon" : data.lon,
+            "fcst_avg" : data.fcst_avg,
+            "norm_mn" : data.norm_mn,
+            "norm_mx" : data.norm_mx}
+        data_dict.append(data_dict)
     
-   # return jsonify(data_dict)###
+    return jsonify(data_dict)
 
    
 if __name__ == "__main__":
