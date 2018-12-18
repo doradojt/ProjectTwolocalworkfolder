@@ -18,10 +18,10 @@ def scrape_one():
     jacket_image = soup.find('li', class_='main-image')
 
     link = jacket_image.find('img', class_='main-image-img')
-    url = link['src']
+    imageurl = link['src']
     title = link['title']
 
-    jackets = { "title": title, "image": url}
+    jackets = { "title": title, "image": imageurl, "url": url}
 
     return jackets
 
@@ -37,10 +37,10 @@ def scrape_two():
     jeans_image = soup.find("li", class_="main-image")
 
     link = jeans_image.find('img', class_= "main-image-img")
-    url = link["src"]
+    imageurl = link["src"]
     title = link["title"]
 
-    jeans = {"title": title, "image": url}
+    jeans = {"title": title, "image": imageurl, "url": url}
 
     return jeans
 
@@ -56,10 +56,10 @@ def scrape_three():
     shoes_image = soup.find("li", class_="main-image")
 
     link = shoes_image.find('img', class_= "main-image-img")
-    url = link["src"]
+    imageurl = link["src"]
     title = link["title"]
 
-    shoes = {"title": title, "image": url}
+    shoes = {"title": title, "image": imageurl, "url": url}
 
     return shoes
 
@@ -75,10 +75,10 @@ def scrape_four():
     shorts_image = soup.find("li", class_="main-image")
 
     link = shorts_image.find('img', class_= "main-image-img")
-    url = link["src"]
+    imageurl = link["src"]
     title = link["title"]
 
-    shorts = {"title": title, "image": url}
+    shorts = {"title": title, "image": imageurl, "url": url}
 
     return shorts
 
@@ -94,10 +94,10 @@ def scrape_five():
     polo_image = soup.find("li", class_="main-image")
 
     link = polo_image.find('img', class_= "main-image-img")
-    url = link["src"]
+    imageurl = link["src"]
     title = link["title"]
 
-    polo = {"title": title, "image": url}
+    polo = {"title": title, "image": imageurl, "url": url}
 
     return polo
 
@@ -113,10 +113,10 @@ def scrape_six():
     sandals_image = soup.find("li", class_="main-image")
 
     link = sandals_image.find('img', class_= "main-image-img")
-    url = link["src"]
+    imageurl = link["src"]
     title = link["title"]
 
-    sandals = {"title": title, "image": url}
+    sandals = {"title": title, "image": imageurl, "url": url}
 
     return sandals
 
@@ -132,10 +132,10 @@ def scrape_seven():
     dress_shirt_image = soup.find("li", class_="main-image")
 
     link = dress_shirt_image.find('img', class_= "main-image-img")
-    url = link["src"]
+    imageurl = link["src"]
     title = link["title"]
 
-    dress_shirt = {"title": title, "image": url}
+    dress_shirt = {"title": title, "image": imageurl, "url": url}
 
     return dress_shirt
 
@@ -151,10 +151,10 @@ def scrape_eight():
     dress_pant_image = soup.find("li", class_="main-image")
 
     link = dress_pant_image.find('img', class_= "main-image-img")
-    url = link["src"]
+    imageurl = link["src"]
     title = link["title"]
 
-    dress_pant = {"title": title, "image": url}
+    dress_pant = {"title": title, "image": imageurl, "url": url}
 
     return dress_pant
 
@@ -170,9 +170,9 @@ def scrape_nine():
     dress_shoe_image = soup.find("li", class_="main-image")
 
     link = dress_shoe_image.find('img', class_= "main-image-img")
-    url = link["src"]
+    imageurl = link["src"]
     title = link["title"]
 
-    dress_shoe = {"title": title, "image": url}
+    dress_shoe = {"title": title, "image": imageurl, "url": url}
 
     return dress_shoe

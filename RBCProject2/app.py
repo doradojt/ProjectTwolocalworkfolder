@@ -25,10 +25,13 @@ def scrape():
 
         "Jacket_Title": jackets["title"],
         "Jacket_Image": jackets["image"],
+        "Jacket_URL":jackets["url"],
         "Jean_Title": jeans["title"],
         "Jean_Image": jeans["image"],
+        "Jean_URL":jeans["url"],
         "Shoes_Title": shoes["title"],
-        "Shoes_Image": shoes["image"]
+        "Shoes_Image": shoes["image"],
+        "Shoes_URL":shoes["url"]
     }
 
     shopping.update({}, shoppingdict, upsert=True)
@@ -47,10 +50,13 @@ def scrapetwo():
 
         "Shorts_Title": shorts["title"],
         "Shorts_Image": shorts["image"],
+        "Shorts_URL": shorts["url"],
         "Polo_Title": polo["title"],
         "Polo_Image": polo["image"],
+        "Polo_URL": polo["url"],
         "Sandals_Title": sandals["title"],
-        "Sandals_Image": sandals["image"]
+        "Sandals_Image": sandals["image"],
+        "Sandals_URL": sandals["url"]
     }
 
     shopping.update({}, shoppingdict, upsert=True)
@@ -69,10 +75,13 @@ def scrapethree():
 
         "DShirt_Title": dress_shirt["title"],
         "DShirt_Image": dress_shirt["image"],
+        "DShirt_URL": dress_shirt["url"],
         "DP_Title": dress_pant["title"],
         "DP_Image": dress_pant["image"],
+        "DP_URL": dress_pant["url"],
         "DS_Title": dress_shoe["title"],
-        "DS_Image": dress_shoe["image"]
+        "DS_Image": dress_shoe["image"],
+        "DS_URL": dress_shoe["url"]
     }
 
     shopping.update({}, shoppingdict, upsert=True)
