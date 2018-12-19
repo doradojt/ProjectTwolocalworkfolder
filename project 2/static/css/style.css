@@ -80,18 +80,11 @@ h3 { color: black;}
     padding-right:10px;
   }
 
-/*
-body {
-  padding: 0;
-  margin: 0;
-}
 
-#map,
-body,
-html {
-  height: 100%;
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
 }
-*/
 
 .marker {
   background-image: url('otherstation.png');
@@ -104,13 +97,3 @@ html {
 }
 
 
-/*
-.well{
-  z-index: -1;
-  position: relative;
-}
-#selDataset{
-  z-index: -1;
-  position: relative;
-}
-*/
